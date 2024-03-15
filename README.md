@@ -17,3 +17,4 @@ Setup virtual enviroment
 ## Authors
 
 * **Asafov Alexander** - *Initial work*
+* **Sukhov Klimenty**
