@@ -7,6 +7,22 @@
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+          $('span.more').each(function() {
+            $(this).html( '<span class="content">'+ $(this).html() +'</span>&nbsp;<a href="#" class="expand">подробнее</span><a href="#" class="close">свернуть<span>' ).addClass( 'closed' );
+          });
+          $('.more .close').click(function(){
+            $(this).parent().removeClass( 'open').addClass('closed');
+            return false;
+          });
+          $('.more .expand').click(function(){
+            $(this).parent().removeClass( 'closed').addClass('open');
+            return false;
+          }); 
+        });
+    </script>
 </head>
 
 <body>

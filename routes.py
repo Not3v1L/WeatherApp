@@ -4,8 +4,22 @@ Routes and views for the bottle application.
 
 from bottle import route, view, request
 from datetime import datetime
+from enum import Enum
+
+class Weather(Enum):
+    CLOUDY = 'static\images\cloudy.png'
+    SUNNY = 'static\images\sunny.png'
+
+class CityWeather:
+  def __init__(self, weather, day_temperature, night_temperature):
+    self.weather = weather
+    self.day_temperature = day_temperature
+    self.night_temperature = night_temperature
 
 cities = ["Санкт-Петербург", "Москва"]
+
+city_to_weather = {"Санкт-Петербург" : CityWeather(Weather.CLOUDY, 5, -1),
+                   "Москва" : CityWeather(Weather.SUNNY, 10, 2)}
 
 @route('/')
 @route('/home')
@@ -40,9 +54,14 @@ def about():
 @route('/city_weather')
 @view('city_weather')
 def city_weather():
-    city_index = int(request.GET.get('city', '').strip())
-    return dict(
-        title='Погода в городе: ' + cities[city_index],
-        message='',
-        year=datetime.now().year
-    )
+    try:
+        city_index = int(request.GET.get('city', '').strip())
+        city = cities[city_index]
+        return dict(
+            title='Погода в городе: ' + city,
+            message='',
+            year=datetime.now().year,
+            weather=city_to_weather[city]
+        )
+    except:
+        return '<h1>Запрашиваемый город не найден</h1>'

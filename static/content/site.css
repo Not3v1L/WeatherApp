@@ -3,6 +3,17 @@ body {
     padding-bottom: 20px;
 }
 
+.more.closed .close, .more.closed .content,
+.more.open .expand {
+    display: none;
+}
+
+.more.open .close, .more.open .content,
+.more.closed .expand {
+    display: inline;
+}
+
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
