@@ -40,6 +40,9 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="orders_data.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
@@ -68,7 +71,7 @@
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
-    <Content Include="views\orders.tpl">
+    <Content Include="views\orders_view.tpl">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>

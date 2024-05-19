@@ -1,4 +1,4 @@
-%rebase('layout.tpl', title=title, year=year)
+%rebase('layout.tpl',orders = orders, title=title, year=year)
 
 <!DOCTYPE html>
 <html>
@@ -13,20 +13,20 @@
         <div class="order-container">
             <div class="order-form-container">
                 <h3>Make an order</h3>
-                <form action="/order" method="post">
+                <form action="/orders" method="post">
+                     <div class="form-group">
+                        <label for="phoneNumber">Phone</label>
+                        <input type="text" class="form-control" id="phoneNumber" name="PHONE_NUMBER" placeholder="Your phone">
+                    </div>
                     <div class="form-group">
                         <label for="productName">Product name</label>
                         <input type="text" class="form-control" id="productName" name="PRODUCT_NAME" placeholder="Product name">
                     </div>
                     <div class="form-group">
                         <label for="productDescription">Description</label>
-                        <textarea class="form-control no-resize" id="productDescription" name="PRODUCT_DESCRIPTION" rows="5" placeholder="Описание товара"></textarea>
+                        <textarea class="form-control no-resize" id="productDescription" name="PRODUCT_DESCRIPTION" rows="5" placeholder="Product description"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="phoneNumber">Phone</label>
-                        <input type="text" class="form-control" id="phoneNumber" name="PHONE_NUMBER" placeholder="Your phone">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Order</button>
+                    <button type="submit" class="btn btn-primary" value="Send">Order</button>
                 </form>
             </div>
         </div>
