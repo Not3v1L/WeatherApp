@@ -65,3 +65,11 @@ def city_weather():
         )
     except:
         return '<h1>Запрашиваемый город не найден</h1>'
+
+@route('/orders')
+@view('orders')
+def orders():
+    return dict(
+            title='Заказы',
+            year=datetime.now().year
+        )
