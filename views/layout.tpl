@@ -6,6 +6,8 @@
     <title>{{ title }} - Погода в России</title>
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" rel="stylesheet">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
@@ -42,6 +44,7 @@
                     <li><a href="/home">Начальная страница</a></li>
                     <li><a href="/about">О нас</a></li>
                     <li><a href="/contact">Контакты</a></li>
+                    <li><a href="/orders"><i class="bi bi-cart"></i> Заказы</a></li>
                 </ul>
             </div>
         </div>
