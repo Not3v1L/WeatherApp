@@ -34,6 +34,7 @@
     .order-form-container .form-control {
         width: 100%;
         padding: 10px;
+        margin-right: 5px;
         border: 1px solid #ccc;
         border-radius: 5px;
         box-sizing: border-box;
@@ -82,4 +83,70 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.orders-container {
+    margin-top: 20px; /* Отступ от формы */
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /* Скругленные края */
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+    .order-table th, .order-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd; /* Разделительные линии */
+    }
+
+    .order-table th {
+        background-color: #f2f2f2; /* Цвет фона заголовка */
+    }
+
+.tooltip-custom {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+    .tooltip-custom .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%; /* Позиция сверху иконки */
+        left: 50%;
+        margin-left: -100px; /* Смещение влево на половину ширины */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        .tooltip-custom .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%; /* Снизу от подсказки */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+    .tooltip-custom:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.text-field-with-hint {
+    display: flex;
+    align-items: center;
 }
